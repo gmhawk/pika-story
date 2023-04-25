@@ -1,8 +1,15 @@
 import { createTheme } from '@mui/material/styles';
 
+declare module '@mui/material/styles/createPalette' {
+    interface PaletteOptions {
+        name?: string,
+    }
+}
+
 export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
+        name: 'dark',
     },
     components: {
         MuiButton: {
@@ -17,6 +24,7 @@ export const darkTheme = createTheme({
 export const lightTheme = createTheme({
     palette: {
         mode: 'light',
+        name: 'light',
     },
     components: {
         MuiRating: {
@@ -28,17 +36,18 @@ export const lightTheme = createTheme({
     }
 });
 
-// export const dittoTheme = createTheme({
-//     palette: {
-//         mode: "ditto", // Need to be extended
-//     },
-//     components: {
-//         MuiRating: {
-//             styleOverrides: {
-//                 root: {
-//                     backgroundColor: 'green',
-//                 },
-//             },
-//         },
-//     }
-// });
+export const dittoTheme = createTheme({
+    palette: {
+        mode: 'light',
+        name: 'ditto',
+    },
+    components: {
+        MuiRating: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'green',
+                },
+            },
+        },
+    }
+});

@@ -1,7 +1,7 @@
 /** @type { import('@storybook/react').Preview } */
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import { lightTheme, darkTheme } from '../src/themes/themes';
+import { lightTheme, darkTheme, dittoTheme } from '../src/themes/themes';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -26,6 +26,7 @@ export const decorators = [
   themes: {
     Light: lightTheme,
     Dark: darkTheme,
+    Ditto: dittoTheme,
   },
   defaultTheme: 'Light',
   Provider: ThemeProvider,
