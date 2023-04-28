@@ -1,14 +1,11 @@
 
 import React from 'react';
-import { Rating, Grid, Box } from "@mui/material";
-import DittoSelected from './assets/ditto-select.svg';
-import DittoUnselect from './assets/ditto-unselect.svg';
-import PikachuSelected from './assets/pikachu_selected.svg';
-import PikachuUnselect from './assets/pikachu_unselected.svg';
+import { Grid, Box } from "@mui/material";
+import PokeRating from '../components/PokeRating';
 
 export default {
   title: 'Rating',
-  component: Rating,
+  component: PokeRating,
 };
 
 // This story uses a render function to fully control how the component renders.
@@ -18,30 +15,14 @@ export const Example = {
       direction="column"
     >
       <Box>
-        <Rating 
+        <PokeRating 
             name="ditto-rating"
             size='large'
             defaultValue={3}
-            icon={
-                <img src={DittoSelected} alt='ditto' />
-            }
-            emptyIcon={
-                <img src={DittoUnselect} alt='ditto' />
-            }
         />
       </Box>
       <Box>
-        <Rating 
-            name="ditto-rating"
-            size='large'
-            defaultValue={3}
-            icon={
-                <img src={PikachuSelected} alt='ditto' />
-            }
-            emptyIcon={
-                <img src={PikachuUnselect} alt='ditto' />
-            }
-        />
+        {/* Other components goes here */}
       </Box>
     </Grid>
   ),

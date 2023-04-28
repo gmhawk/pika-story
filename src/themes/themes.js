@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material/styles';
 
-declare module '@mui/material/styles/createPalette' {
-    interface PaletteOptions {
-        name?: string,
-    }
-}
+// declare module '@mui/material/styles/createPalette' {
+//     interface PaletteOptions {
+//         name?: string,
+//     }
+// }
 
 export const darkTheme = createTheme({
     palette: {
@@ -45,7 +45,6 @@ export const dittoTheme = createTheme({
         MuiRating: {
             styleOverrides: {
                 root: {
-                    backgroundColor: 'green',
                 },
             },
         },

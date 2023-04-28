@@ -1,18 +1,18 @@
 // import { useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles'
-import { Button } from '@mui/material'
-import lightTheme from './themes/light.theme'
+import { dittoTheme } from './themes/themes'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import PokeRating from './components/PokeRating'
 import './App.css'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={dittoTheme}>
       <div className="App">
-        <Button variant='contained'>Hello</Button>
+        <PokeRating />
       </div>
     </ThemeProvider>
   )
