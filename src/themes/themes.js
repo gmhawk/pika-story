@@ -10,6 +10,7 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         name: 'dark',
+        gengar: {},
     },
     components: {
         MuiButton: {
@@ -25,6 +26,10 @@ export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         name: 'light',
+        pikachu: {
+            yellow: '#FDDC00',
+            black: '#000000',
+        },
     },
     components: {
         MuiRating: {
@@ -40,6 +45,10 @@ export const dittoTheme = createTheme({
     palette: {
         mode: 'light',
         name: 'ditto',
+        ditto: {
+            purple: '#C346FF',
+            black: '#000000',
+        },
     },
     components: {
         MuiRating: {

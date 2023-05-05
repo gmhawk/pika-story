@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
+import Showcase from './Showcase';
 import PokeRating from '../components/PokeRating';
 
 export default {
@@ -9,17 +10,21 @@ export default {
 
 export const Example = {
   render: () => (
-    <Grid>
-      <Box>
+    <Grid container spacing={2}>
+      <Showcase title="Rating">
         <PokeRating 
             name="rating"
             size="large"
             defaultValue={3}
         />
-      </Box>
-      <Box>
-        {/* Other components goes here */}
-      </Box>
+      </Showcase>
+      <Showcase title="Rating">
+          <PokeRating 
+              name="rating"
+              size="large"
+              defaultValue={3}
+          />
+        </Showcase>
     </Grid>
   ),
 };
