@@ -5,10 +5,10 @@ import Showcase from './Showcase';
 import PokeRating from '../components/PokeRating';
 
 export default {
-  title: 'Examples',
+  title: 'Design System',
 };
 
-export const Example = {
+export const Pokemon = {
   render: () => (
     <Grid container spacing={2}>
       <Showcase title="Rating">
