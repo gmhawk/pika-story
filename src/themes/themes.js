@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { yellow, deepPurple } from '@mui/material/colors';
 
 // declare module '@mui/material/styles/createPalette' {
 //     interface PaletteOptions {
@@ -27,15 +28,21 @@ export const lightTheme = createTheme({
         mode: 'light',
         name: 'light',
         pikachu: {
-            yellow: '#FDDC00',
+            yellow: yellow['A400'],
             black: '#000000',
         },
     },
     components: {
-        MuiRating: {
+        MuiButton: {
             styleOverrides: {
-                root: {
-                },
+                containedPrimary: ({ theme }) => ({
+                    backgroundColor: theme.palette.pikachu.yellow,
+                    color: theme.palette.pikachu.black,
+                    '&:hover': {
+                        backgroundColor: yellow['A700'],
+                    },
+                }),
+                
             },
         },
     }
@@ -46,15 +53,21 @@ export const dittoTheme = createTheme({
         mode: 'light',
         name: 'ditto',
         ditto: {
-            purple: '#C346FF',
+            purple: deepPurple['A100'],
             black: '#000000',
         },
     },
     components: {
-        MuiRating: {
+        MuiButton: {
             styleOverrides: {
-                root: {
-                },
+                containedPrimary: ({ theme }) => ({
+                    backgroundColor: theme.palette.ditto.purple,
+                    color: theme.palette.ditto.black,
+                    '&:hover': {
+                        backgroundColor: deepPurple['A200'],
+                    },
+                }),
+                
             },
         },
     }

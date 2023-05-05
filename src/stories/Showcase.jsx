@@ -25,7 +25,7 @@ const Showcase = ({ title, children }) => {
 
 Showcase.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.elementType,
+    children: PropTypes.object,
 }
 
 export default Showcase;
