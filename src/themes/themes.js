@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { yellow, deepPurple } from '@mui/material/colors';
+import { yellow, deepPurple, red, purple } from '@mui/material/colors';
 
 // declare module '@mui/material/styles/createPalette' {
 //     interface PaletteOptions {
@@ -11,13 +11,24 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         name: 'dark',
-        gengar: {},
+        pokemon: {
+            primary: deepPurple['800'],
+            secondary: red['400'],
+            dark: deepPurple['900'],
+            black: '#000000',
+        },
     },
     components: {
         MuiButton: {
             styleOverrides: {
-                root: {
-                },
+                containedPrimary: ({ theme }) => ({
+                    backgroundColor: theme.palette.pokemon.primary,
+                    color: theme.palette.pokemon.black,
+                    '&:hover': {
+                        backgroundColor: theme.palette.pokemon.dark,
+                    },
+                }),
+                
             },
         },
     }
@@ -27,8 +38,10 @@ export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         name: 'light',
-        pikachu: {
-            yellow: yellow['A400'],
+        pokemon: {
+            primary: yellow['A400'],
+            secondary: red['500'],
+            dark: yellow['A700'],
             black: '#000000',
         },
     },
@@ -36,10 +49,10 @@ export const lightTheme = createTheme({
         MuiButton: {
             styleOverrides: {
                 containedPrimary: ({ theme }) => ({
-                    backgroundColor: theme.palette.pikachu.yellow,
-                    color: theme.palette.pikachu.black,
+                    backgroundColor: theme.palette.pokemon.primary,
+                    color: theme.palette.pokemon.black,
                     '&:hover': {
-                        backgroundColor: yellow['A700'],
+                        backgroundColor: theme.palette.pokemon.dark,
                     },
                 }),
                 
@@ -52,8 +65,10 @@ export const dittoTheme = createTheme({
     palette: {
         mode: 'light',
         name: 'ditto',
-        ditto: {
-            purple: deepPurple['A100'],
+        pokemon: {
+            primary: deepPurple['A100'],
+            secondary: purple['200'],
+            dark: deepPurple['A200'],
             black: '#000000',
         },
     },
@@ -61,10 +76,10 @@ export const dittoTheme = createTheme({
         MuiButton: {
             styleOverrides: {
                 containedPrimary: ({ theme }) => ({
-                    backgroundColor: theme.palette.ditto.purple,
-                    color: theme.palette.ditto.black,
+                    backgroundColor: theme.palette.pokemon.primary,
+                    color: theme.palette.pokemon.black,
                     '&:hover': {
-                        backgroundColor: deepPurple['A200'],
+                        backgroundColor: theme.palette.pokemon.dark,
                     },
                 }),
                 
