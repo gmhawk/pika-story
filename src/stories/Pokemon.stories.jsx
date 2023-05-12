@@ -4,6 +4,7 @@ import { Button, Grid } from "@mui/material";
 import Showcase from './Showcase';
 import PokeRating from '../components/PokeRating';
 import Palettes from '../components/Palettes';
+import PokeAvatar from '../components/PokeAvatar';
 
 export default {
   title: 'Design System',
@@ -12,7 +13,10 @@ export default {
 export const Pokemon = {
   render: () => (
     <Grid container spacing={2}>
-      <Showcase title="Palettes">
+      <Showcase title="Avatar">
+        <PokeAvatar />
+      </Showcase>
+      <Showcase title="Palette">
         <Palettes />
       </Showcase>
       <Showcase title="Rating">
