@@ -1790,6 +1790,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/aladin@npm:^4.5.11":
+  version: 4.5.11
+  resolution: "@fontsource/aladin@npm:4.5.11"
+  checksum: 8cf422696c3982e105f8de66ad5dedc6d3c39873f9101e823fddcb5eb784fed925bb185983de881673dba8cc644d1b1419638a84e8c786ff2db359074e8e05ac
+  languageName: node
+  linkType: hard
+
 "@fontsource/material-icons@npm:^4.5.4":
   version: 4.5.4
   resolution: "@fontsource/material-icons@npm:4.5.4"
@@ -8832,6 +8839,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.6
     "@emotion/styled": ^11.10.6
+    "@fontsource/aladin": ^4.5.11
     "@fontsource/material-icons": ^4.5.4
     "@fontsource/roboto": ^4.5.8
     "@mui/icons-material": ^5.11.16

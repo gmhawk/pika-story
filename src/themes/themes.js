@@ -72,6 +72,9 @@ export const dittoTheme = createTheme({
             black: '#000000',
         },
     },
+    typography: {
+        fontFamily: 'Aladin, Roboto',
+    },
     components: {
         MuiButton: {
             styleOverrides: {
